@@ -168,7 +168,7 @@ const Home = () => {
             {/* Hero Section */}
             <section
                 id="home"
-                className="min-h-screen flex items-center justify-center bg-light-bg dark:bg-dark-bg text-gray-900 dark:text-white pb-16 px-4 sm:px-6 lg:px-8"
+                className="min-h-screen flex items-center justify-center bg-lightBg dark:bg-darkBg text-gray-900 dark:text-white pb-16 px-4 sm:px-6 lg:px-8"
             >
                 <motion.div
                     className="container mx-auto grid md:grid-cols-2 gap-12 items-start max-w-6xl"
@@ -276,7 +276,7 @@ const Home = () => {
             <section
                 ref={aboutRef}
                 id="about"
-                className="pb-10 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-dark-bg"
+                className="pb-10 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-darkBg"
             >
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -437,7 +437,7 @@ const Home = () => {
             <section
                 ref={projectsRef}
                 id="projects"
-                className="pb-10 px-4 sm:px-6 lg:px-8 bg-light-bg dark:bg-dark-bg"
+                className="pb-10 px-4 sm:px-6 lg:px-8 bg-light-bg dark:bg-darkBg"
             >
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
@@ -564,7 +564,7 @@ const Home = () => {
             <section
                 ref={contactRef}
                 id="contact"
-                className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-dark-bg"
+                className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-darkBg"
             >
                 <div className="container mx-auto max-w-6xl">
                     <motion.div

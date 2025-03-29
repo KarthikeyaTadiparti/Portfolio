@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-primary: #007BFF; /* Bright Blue */
-    --color-secondary: #6C757D; /* Muted Gray */
-    --color-light-bg: #F8F9FA; /* Soft White */
-    --color-dark-bg: #121212; /* Near Black */
-  }
   
   body {
-    @apply bg-light-bg dark:bg-dark-bg text-gray-900 dark:text-white;
+    @apply bg-lightBg dark:bg-darkBg text-gray-900 dark:text-white;
   }
 }
 
