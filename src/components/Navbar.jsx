@@ -13,7 +13,20 @@ const Navbar = () => {
     setIsOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Get the height of the navbar
+      const navbarHeight = document.querySelector('nav').offsetHeight;
+      
+      // Get the element's position relative to the viewport
+      const elementPosition = element.getBoundingClientRect().top;
+      
+      // Calculate the position to scroll to (element position + current scroll - navbar height)
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20; // Added extra 20px for padding
+      
+      // Smooth scroll to the adjusted position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 

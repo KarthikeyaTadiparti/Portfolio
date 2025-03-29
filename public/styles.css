@@ -606,10 +606,6 @@ body:is(.dark *) {
   visibility: visible;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .fixed {
   position: fixed;
 }
@@ -657,6 +653,10 @@ body:is(.dark *) {
 
 .-mt-16 {
   margin-top: -4rem;
+}
+
+.-mt-28 {
+  margin-top: -7rem;
 }
 
 .mb-12 {
@@ -1089,14 +1089,14 @@ body:is(.dark *) {
   padding-bottom: 2.5rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .py-3 {
@@ -1114,8 +1114,9 @@ body:is(.dark *) {
   padding-bottom: 1.25rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .pb-16 {
@@ -1126,12 +1127,16 @@ body:is(.dark *) {
   padding-top: 4rem;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.pt-28 {
+  padding-top: 7rem;
 }
 
 .text-left {
@@ -1491,10 +1496,6 @@ body:is(.dark *) {
     grid-column: span 2 / span 2;
   }
 
-  .md\:-mt-20 {
-    margin-top: -5rem;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -1526,10 +1527,6 @@ body:is(.dark *) {
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-
-  .md\:pt-20 {
-    padding-top: 5rem;
   }
 
   .md\:text-3xl {

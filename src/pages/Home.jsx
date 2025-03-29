@@ -50,13 +50,16 @@ const Home = () => {
     const contactRef = useRef(null);
 
     const scrollToSection = (ref) => {
-        if (ref === aboutRef) {
-            // For about section, use the anchor element for better alignment
-            document
-                .getElementById("about-anchor")
-                .scrollIntoView({ behavior: "smooth" });
-        } else {
-            ref.current.scrollIntoView({ behavior: "smooth" });
+        // Use the anchor elements for better scrolling
+        const sectionId = ref === aboutRef ? "about" : 
+                          ref === projectsRef ? "projects" : 
+                          ref === contactRef ? "contact" : "";
+        
+        if (sectionId) {
+            const anchorElement = document.getElementById(`${sectionId}-anchor`);
+            if (anchorElement) {
+                anchorElement.scrollIntoView({ behavior: "smooth" });
+            }
         }
     };
 
@@ -276,20 +279,17 @@ const Home = () => {
             <section
                 ref={aboutRef}
                 id="about"
-                className="pb-10 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-darkBg"
+                className="pb-8 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-darkBg"
             >
+                <div id="about-anchor" className="absolute -mt-16 pt-16"></div>
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
-                        className="mb-16 pt-4"
+                        className="mb-16 pt-2"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true, margin: "-100px" }}
                     >
-                        <div
-                            id="about-anchor"
-                            className="-mt-16 md:-mt-20 pt-16 md:pt-20 invisible absolute"
-                        ></div>
                         <motion.h2
                             className="text-4xl font-bold mb-8 text-center"
                             initial={{ y: 20, opacity: 0 }}
@@ -437,8 +437,9 @@ const Home = () => {
             <section
                 ref={projectsRef}
                 id="projects"
-                className="pb-10 px-4 sm:px-6 lg:px-8 bg-light-bg dark:bg-darkBg"
+                className="py-16 px-4 sm:px-6 lg:px-8 bg-light-bg dark:bg-darkBg"
             >
+                <div id="projects-anchor" className="absolute -mt-28 pt-28"></div>
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -564,8 +565,9 @@ const Home = () => {
             <section
                 ref={contactRef}
                 id="contact"
-                className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-darkBg"
+                className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-darkBg"
             >
+                <div id="contact-anchor" className="absolute -mt-28 pt-28"></div>
                 <div className="container mx-auto max-w-6xl">
                     <motion.div
                         initial={{ opacity: 0 }}
