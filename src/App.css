@@ -1,0 +1,4 @@
+/* Custom App styles */
+main {
+  min-height: calc(100vh - 180px); /* Account for navbar and footer */
+} 
